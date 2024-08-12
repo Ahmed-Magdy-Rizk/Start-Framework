@@ -1,0 +1,32 @@
+<section class="mt-24">
+    <h1 class="text-5xl uppercase font-bold mb-5 text-[#2C3D50] text-center pt-4">contact section</h1>
+    <div class="star flex justify-center items-center">
+      <div class="bg-[#2C3D50] w-[80px] h-[4px]"></div>
+      <i class="fa-solid fa-star mx-5 text-[#2C3D50]"></i>
+      <div class="bg-[#2C3D50] w-[80px] h-[4px]"></div>
+    </div>
+    <form class="container w-6/12 mx-auto p-3 mt-12 text-black">
+      <label for="userName" class="text-[#1ABC9C] -z-10 relative top-0 transition-all duration-500" 
+      [class.top-10]="!typingStates['userName']">userName :</label>
+      <input type="text" id="userName" placeholder="userName" (input)="showLabel($event, 'userName')"
+        class="border-0 border-b rounded py-2 w-full focus:outline-none mt-2 mb-5">
+  
+      <label for="userAge" class="text-[#1ABC9C] -z-10 relative top-0 transition-all duration-500" 
+      [class.top-10]="!typingStates['userAge']">userAge :</label>
+      <input type="number" id="userAge" placeholder="userAge" (input)="showLabel($event, 'userAge')"
+        class="border-0 border-b rounded py-2 w-full focus:outline-none mt-2 mb-5">
+  
+      <label for="userEmail" class="text-[#1ABC9C] -z-10 relative top-0 transition-all duration-500" 
+      [class.top-10]="!typingStates['userEmail']">userEmail :</label>
+      <input type="email" id="userEmail" placeholder="userEmail" (input)="showLabel($event, 'userEmail')"
+        class="border-0 border-b rounded py-2 w-full focus:outline-none mt-2 mb-5">
+  
+      <label for="userPassword" class="text-[#1ABC9C] -z-10 relative top-0 transition-all duration-500" 
+      [class.top-10]="!typingStates['userPassword']">userPassword :</label>
+      <input type="password" id="userPassword" placeholder="userPassword" (input)="showLabel($event, 'userPassword')"
+        class="border-0 border-b rounded py-2 w-full focus:outline-none mt-2 mb-5">
+  
+      <button class="bg-[#1ABC9C] p-2 rounded text-white">Send Message</button>
+    </form>
+  </section>
+  

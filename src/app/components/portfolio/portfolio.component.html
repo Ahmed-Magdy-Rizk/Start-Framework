@@ -1,0 +1,72 @@
+<section class="mt-24">
+    <h1 class="text-5xl uppercase font-bold mb-5 text-[#2C3D50] text-center pt-4" >portfolio  component</h1>
+    <div class="star flex justify-center items-center">
+        <div class="bg-[#2C3D50] w-[80px] h-[4px]" ></div>
+        <i class="fa-solid fa-star mx-5 text-[#2C3D50]"></i>
+        <div class="bg-[#2C3D50] w-[80px] h-[4px]"></div>
+    </div>
+    <div class="container mx-auto w-[90%]">
+        <div class="row justify-center">
+            <div class="sm:w-full md:w-6/12 lg:w-1/3 p-5 group" id="0" (click)="toggleLightbox($event)">
+                <div class="relative rounded-xl overflow-hidden">
+                    <div
+                        class="layer absolute inset-0 bg-emerald-400 opacity-0 group-hover:opacity-90 transition-all duration-500 z-10 flex items-center justify-center">
+                        <i class="text-white fa-solid fa-plus fa-6x"></i>
+                    </div>
+                    <img src="../../../assets/house.png" alt="" class="w-full rounded-xl">
+                </div>
+            </div>
+            <div class="sm:w-full md:w-6/12 lg:w-1/3 p-5 group" id="1" (click)="toggleLightbox($event)">
+                <div class="relative rounded-xl overflow-hidden">
+                    <div
+                        class="layer absolute inset-0 bg-emerald-400 opacity-0 group-hover:opacity-90 transition-all duration-500 z-10 flex items-center justify-center">
+                        <i class="text-white fa-solid fa-plus fa-6x"></i>
+                    </div>
+                    <img src="../../../assets/cake.png" alt="" class="w-full rounded-xl">
+                </div>
+            </div>
+            <div class="sm:w-full md:w-6/12 lg:w-1/3 p-5 group" id="2" (click)="toggleLightbox($event)">
+                <div class="relative rounded-xl overflow-hidden">
+                    <div
+                        class="layer absolute inset-0 bg-emerald-400 opacity-0 group-hover:opacity-90 transition-all duration-500 z-10 flex items-center justify-center">
+                        <i class="text-white fa-solid fa-plus fa-6x"></i>
+                    </div>
+                    <img src="../../../assets/circus.png" alt="" class="w-full rounded-xl">
+                </div>
+            </div>
+            <div class="sm:w-full md:w-6/12 lg:w-1/3 p-5 group" id="3" (click)="toggleLightbox($event)">
+                <div class="relative rounded-xl overflow-hidden">
+                    <div
+                        class="layer absolute inset-0 bg-emerald-400 opacity-0 group-hover:opacity-90 transition-all duration-500 z-10 flex items-center justify-center">
+                        <i class="text-white fa-solid fa-plus fa-6x"></i>
+                    </div>
+                    <img src="../../../assets/house.png" alt="" class="w-full rounded-xl">
+                </div>
+            </div>
+            <div class="sm:w-full md:w-6/12 lg:w-1/3 p-5 group" id="4" (click)="toggleLightbox($event)">
+                <div class="relative rounded-xl overflow-hidden">
+                    <div
+                        class="layer absolute inset-0 bg-emerald-400 opacity-0 group-hover:opacity-90 transition-all duration-500 z-10 flex items-center justify-center">
+                        <i class="text-white fa-solid fa-plus fa-6x"></i>
+                    </div>
+                    <img src="../../../assets/cake.png" alt="" class="w-full rounded-xl">
+                </div>
+            </div>
+            <div class="sm:w-full md:w-6/12 lg:w-1/3 p-5 group" id="5" (click)="toggleLightbox($event)">
+                <div class="relative rounded-xl overflow-hidden">
+                    <div
+                        class="layer absolute inset-0 bg-emerald-400 opacity-0 group-hover:opacity-90 transition-all duration-500 z-10 flex items-center justify-center">
+                        <i class="text-white fa-solid fa-plus fa-6x"></i>
+                    </div>
+                    <img src="../../../assets/circus.png" alt="" class="w-full rounded-xl">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<div class="lightbox-container fixed bg-[#0d6dfd40] inset-0 z-20 flex justify-center items-center"
+    [class.hidden]="isClicked" (click)="toggleLightbox($event)">
+    <img [src]="urls[elemntIdNumber]" alt="" class="w-5/12" (click)="$event.stopPropagation()">
+</div>

@@ -1,0 +1,17 @@
+<!-- Nav Bar Section -->
+ <nav [class]="isScrolled ? 'fixed top-0 left-0 right-0 bg-[#2c3d50] text-white px-6 py-5 transition-all duration-500 z-50' : 'fixed top-0 left-0 right-0 bg-[#2c3d50] text-white px-6 py-8 transition-all duration-500 z-50'">
+    <div class="flex justify-between items-center container mx-auto w-11/12 ">
+        <a routerLink="home" class="text-3xl font-bold uppercase">Start Framework</a>
+        <ul class="flex space-x-5 text-1xl uppercase font-bold">
+            <li>
+                <a routerLink="about" routerLinkActive="bg-[#1ABC9C] p-2 rounded">About</a>
+            </li>
+            <li>
+                <a routerLink="portfolio" routerLinkActive="bg-[#1ABC9C] p-2 rounded">portfolio</a>
+            </li>
+            <li>
+                <a routerLink="contact" routerLinkActive="bg-[#1ABC9C] p-2 rounded">Contact</a>
+            </li>
+        </ul>
+    </div>
+ </nav>
